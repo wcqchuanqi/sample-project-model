@@ -18,7 +18,7 @@ target/
 *.iws
 *.iml
 *.ipr
-*.mvn
+
 
 ### NetBeans ###
 /nbproject/private/
@@ -36,4 +36,4 @@ build/
 ### maven ###
 mvnw.cmd
 /mvnw
-*.mvn
+.mvn/
