@@ -11,8 +11,8 @@ import java.util.Date;
  * table：user_info
  *
  * @author wangchuanqi
- * @since 2020/12/17
  * @version 0.0.1
+ * @since 2020/12/17
  */
 @Getter
 @Setter
@@ -24,10 +24,16 @@ public class UserInfo {
     @TableId(type = IdType.AUTO)
     private String id;
     /**
+     * 租户id(多租户默认字段tenant_id 如果使用其他字段需要修改多租户插件注入).
+     */
+    private String tenantId;
+
+    /**
      * 用户id.
      */
     @TableField(value = "user_id")
     private String userId;
+
     /**
      * 用户名称.
      * 省略 @TableField  表字段与属性字段映射关系。user_name --> userName
@@ -54,5 +60,6 @@ public class UserInfo {
      * https://baomidou.com/guide/logic-delete.html#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95 注解使用文档
      */
     @TableLogic
+    @TableField(fill = FieldFill.INSERT)
     private Integer delLogic;
 }
