@@ -27,7 +27,6 @@ sample-project-vo<br/>
 sample-project-web依赖sample-project-biz<br/>
 sample-project-biz依赖sample-project-dao/vo/common<br/>
 sample-project-dao依赖sample-project-domain<br/>
-sample-project-dao依赖sample-project-domain<br/>
 sample-project-vo依赖sample-project-domain<br/>
 
 <h2>2.Spring boot 快速搭建项目</h2>
