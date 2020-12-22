@@ -10,7 +10,9 @@
   子项目：sample-project-web、sample-project-biz、sample-project-dao、sample-project-sdk、
   sample-project-common、sample-project-domain、sample-project-vo</module>
   
-PS：继承关系便于共性管理，如dependency、plugin等
+PS：继承关系便于共性管理，如dependency、plugin等；<br/>
+    聚会关系便于构建项目；<br/>
+    分析依赖关系有利于防止包冲突；<br/>
 
 <h3>聚合关系</h3>
 sample-project-model<br/>
