@@ -19,9 +19,10 @@
         <validation-api.version>2.0.1.Final</validation-api.version>
         <druid.boot.version>1.1.10</druid.boot.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>
-        <common-lang3.version>3.8.1</common-lang3.version>
+        <commons-lang3.version>3.8.1</commons-lang3.version>
         <aspectj.version>1.9.5</aspectj.version>
         <hutool-all.version>5.5.4</hutool-all.version>
+        <mysql.version>5.1.48</mysql.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -33,6 +34,7 @@
         <module>sample-project-sdk</module>
         <module>sample-project-common</module>
         <module>sample-project-domain</module>
+        <module>sample-project-vo</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -90,7 +92,13 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>${common-lang3.version}</version>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <!-- Mysql -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
             </dependency>
             <!--数据库连接池-->
             <dependency>
@@ -135,6 +143,14 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
         </plugins>

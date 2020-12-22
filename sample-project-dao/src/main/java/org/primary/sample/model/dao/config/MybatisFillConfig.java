@@ -10,6 +10,7 @@ import java.util.Date;
 /**
  * MP相关配置
  *
+ * @author wangchuanqi
  * @since 2012/12/19
  */
 @Component

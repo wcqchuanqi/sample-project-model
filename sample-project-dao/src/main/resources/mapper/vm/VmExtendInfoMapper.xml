@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.primary.sample.model.dao.vm.mapper.VmExtendInfoMapper">
+    <resultMap id="BaseResultMap" type="org.primary.sample.model.dao.vm.entity.VmExtendInfo">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <!--        <result column="tenant_id" jdbcType="VARCHAR" property="tenantId"/>-->
+        <result column="vm_id" jdbcType="VARCHAR" property="vmId"/>
+        <result column="extend_info_01" jdbcType="VARCHAR" property="extendInfo01"/>
+        <result column="extend_info_02" jdbcType="VARCHAR" property="extendInfo02"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime"/>
+        <result column="del_logic" jdbcType="INTEGER" property="delLogic"/>
+    </resultMap>
+    <!--    <sql id="Base_Column_List">-->
+    <!--        id, tenant_id,vm_id,extend_info_01,extend_info_02, create_time, modify_time, del_logic-->
+    <!--    </sql>-->
+    <sql id="Base_Column_List">
+        id,vm_id,extend_info_01,extend_info_02, create_time, modify_time, del_logic
+    </sql>
+    <select id="queryVmExtendInfoList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from ${ew.customSqlSegment}
+    </select>
+</mapper>

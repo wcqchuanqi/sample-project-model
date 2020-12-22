@@ -13,11 +13,6 @@
     <description>用于存储各个module所使用的POJO（不包括数据库的entity）；该module的POJO是可以对外发布的</description>
 
     <dependencies>
-        <!--spring boot start-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
 
         <!--lombox-->
         <dependency>
@@ -26,14 +21,5 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

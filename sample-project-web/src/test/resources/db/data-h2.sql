@@ -1,0 +1,3 @@
+insert into `vm_info` ( `del_logic`, `vm_name`, `create_time`, `modify_time`, `vm_id`) values ( '0', 'vm_name_01', '2020-12-22 19:27:21', '2020-12-22 19:27:22', 'vm_001');
+insert into `vm_extend_info` ( `del_logic`, `modify_time`, `extend_info_02`, `vm_id`, `create_time`, `extend_info_01`) values ( '0', '2020-12-22 19:29:05', 'extend_01', 'vm_001', '2020-12-22 19:29:03', 'extend_01');
+insert into `vm_extend_info` ( `del_logic`, `modify_time`, `extend_info_02`, `vm_id`, `create_time`, `extend_info_01`) values ( '0', '2020-12-22 11:29:45', 'extend_02', 'vm_001', '2020-12-22 19:29:32', 'extend_02');

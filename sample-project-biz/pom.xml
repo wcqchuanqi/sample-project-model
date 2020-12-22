@@ -23,7 +23,7 @@
         <!-- domain依赖 -->
         <dependency>
             <groupId>org.primary.sample.model</groupId>
-            <artifactId>sample-project-domain</artifactId>
+            <artifactId>sample-project-vo</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <!-- common依赖 -->
@@ -31,6 +31,12 @@
             <groupId>org.primary.sample.model</groupId>
             <artifactId>sample-project-common</artifactId>
             <version>${project.parent.version}</version>
+        </dependency>
+        <!--lombox-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
         <!--spring boot test测试-->
         <dependency>

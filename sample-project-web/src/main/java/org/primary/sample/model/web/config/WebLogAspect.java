@@ -2,7 +2,7 @@ package org.primary.sample.model.web.config;
 
 import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -48,7 +48,7 @@ public class WebLogAspect {
      * @throws Throwable 异常
      */
     @Before("webLog()")
-    public void doBefore(ProceedingJoinPoint joinPoint) throws Throwable {
+    public void doBefore(JoinPoint joinPoint) throws Throwable {
         timeInfo.set(Instant.now().toEpochMilli());
         // 接收到请求，记录请求内容
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();

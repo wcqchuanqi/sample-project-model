@@ -3,10 +3,8 @@ package org.primary.sample.model.dao.config;
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.handler.TenantLineHandler;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerInterceptor;
-import net.sf.jsqlparser.expression.Expression;
 import net.sf.jsqlparser.expression.LongValue;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
@@ -31,7 +29,7 @@ public class MybatisPlusConfig {
     public MybatisPlusInterceptor mybatisPlusInterceptorAll() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
         //  添加多租户插件
-        interceptor.addInnerInterceptor(this.getTenantLineInnerInterceptor());
+//        interceptor.addInnerInterceptor(this.getTenantLineInnerInterceptor());
         // 添加分页插件
         interceptor.addInnerInterceptor(this.getPaginationInnerInterceptor());
         return interceptor;
@@ -55,8 +53,7 @@ public class MybatisPlusConfig {
     private PaginationInnerInterceptor getPaginationInnerInterceptor() {
         PaginationInnerInterceptor interceptor = new PaginationInnerInterceptor();
         //  数据库类型
-        interceptor.setDbType(DbType.H2);
-        // interceptor.setDbType(DbType.MYSQL);
+        interceptor.setDbType(DbType.MYSQL);
         // 单页分页条数限制,默认 500 条，小于 0 如 -1 不受限制(处理超出分页条数限制,默认归为限制数)
         interceptor.setMaxLimit(1000L);
         return interceptor;

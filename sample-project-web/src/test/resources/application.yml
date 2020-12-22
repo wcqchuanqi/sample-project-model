@@ -1,0 +1,22 @@
+#spring
+spring:
+  aop:
+    auto: true
+  datasource: #配置DB
+    driver-class-name: org.h2.Driver #配置H2的驱动程序类
+    schema: classpath:db/schema-h2.sql
+    data: classpath:db/data-h2.sql
+    url: jdbc:h2:mem:test
+    username: sa
+
+
+
+# mybatis plus
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: org.primary.sample.model.dao.**.entity
+  global-config:
+    db-config:
+      logic-delete-value: 1 # 逻辑删除值（默认为1）
+      logic-not-delete-value: 0 # 逻辑未删除值（默认为0）
+      # logic-delete-field: delLogic  # 全逻辑删除的实体字段（ 可以省略配置@TableLogic ，个人习惯还是用注解)

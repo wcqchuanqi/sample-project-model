@@ -9,6 +9,10 @@ import java.util.Date;
 /**
  * vm 扩展信息 eneity
  * table：vm_extend_info
+ *
+ * @author wangchuanqi
+ * @version 0.0.1
+ * @since 2020/12/22
  */
 @Setter
 @Getter
@@ -20,10 +24,10 @@ public class VmExtendInfo {
      */
     @TableId(type = IdType.AUTO)
     private String id;
-    /**
-     * 租户id(多租户默认字段tenant_id 如果使用其他字段需要修改多租户插件注入).
-     */
-    private String tenantId;
+//    /**
+//     * 租户id(多租户默认字段tenant_id 如果使用其他字段需要修改多租户插件注入).
+//     */
+//    private String tenantId;
     /**
      * vm id.
      */
@@ -32,11 +36,13 @@ public class VmExtendInfo {
     /**
      * 扩展信息01.
      */
+    @TableField("extend_info_01")
     private String extendInfo01;
 
     /**
      * 扩展信息02.
      */
+    @TableField("extend_info_02")
     private String extendInfo02;
 
     /**

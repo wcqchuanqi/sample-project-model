@@ -23,10 +23,10 @@ public class UserInfo {
      */
     @TableId(type = IdType.AUTO)
     private String id;
-    /**
-     * 租户id(多租户默认字段tenant_id 如果使用其他字段需要修改多租户插件注入).
-     */
-    private String tenantId;
+//    /**
+//     * 租户id(多租户默认字段tenant_id 如果使用其他字段需要修改多租户插件注入).
+//     */
+//    private String tenantId;
 
     /**
      * 用户id.
