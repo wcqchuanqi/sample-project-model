@@ -70,7 +70,7 @@ public class VmDtoAndVo {
         response.setVmExtendInfoVoList(
                 vmExtendInfoList.stream().map(extend -> {
                     VmDetailInfoResponse.VmExtendInfoVo vmExtendInfo = new VmDetailInfoResponse().new VmExtendInfoVo();
-                    BeanUtils.copyProperties(vmExtendInfo, extend);
+                    BeanUtils.copyProperties(extend, vmExtendInfo);
                     return vmExtendInfo;
                 }).collect(Collectors.toList()));
     }

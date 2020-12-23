@@ -1,6 +1,5 @@
 package org.primary.sample.model.dao.vm.mapper;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.primary.sample.model.dao.vm.entity.VmExtendInfo;
 
@@ -14,11 +13,13 @@ import java.util.List;
  * @since 2020/12/22
  */
 public interface VmExtendInfoMapper extends BaseMapper<VmExtendInfo> {
+
+
     /**
-     * 获取vm扩展信息.
+     * 获取vm扩展信息(sql).
      *
-     * @param ew 条件
-     * @return VmExtendInfo list
+     * @param vmExtendInfo vmExtendInfo
+     * @return
      */
-    List<VmExtendInfo> queryVmExtendInfoList(Wrapper<VmExtendInfo> ew);
+    List<VmExtendInfo> queryVmExtendInfoListSQL(VmExtendInfo vmExtendInfo);
 }

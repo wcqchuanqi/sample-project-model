@@ -67,7 +67,7 @@ public class VmWebServiceImpl implements IVmWebService {
         VmDetailInfoResponse response = new VmDetailInfoResponse();
         VmInfo vmInfo = vmInfoService.queryVmInfoByVmId(vmId);
         if (null != vmInfo) {
-            BeanUtils.copyProperties(response, vmInfo);
+            BeanUtils.copyProperties(vmInfo, response);
             VmDtoAndVo.vmExtendInfoToVmDetailInfoResponse(response, vmExtendInfoService.queryVmExtendInfoList(vmId));
         }
         return response;

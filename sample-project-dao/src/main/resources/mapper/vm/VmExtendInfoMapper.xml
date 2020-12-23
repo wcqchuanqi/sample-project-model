@@ -17,9 +17,19 @@
     <sql id="Base_Column_List">
         id,vm_id,extend_info_01,extend_info_02, create_time, modify_time, del_logic
     </sql>
-    <select id="queryVmExtendInfoList" resultMap="BaseResultMap">
+    <select id="queryVmExtendInfoList" resultType="org.primary.sample.model.dao.vm.entity.VmExtendInfo">
         select
         <include refid="Base_Column_List"/>
-        from ${ew.customSqlSegment}
+        from vm_extend_info ${ew.customSqlSegment}
+    </select>
+    <select id="queryVmExtendInfoListSQL" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from vm_extend_info
+        where
+        del_logic=0
+        <if test="vmId != null">
+            and vm_id = #{vmId,jdbcType=VARCHAR}
+        </if>
     </select>
 </mapper>

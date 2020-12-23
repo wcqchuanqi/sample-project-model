@@ -1,6 +1,5 @@
 package org.primary.sample.model.dao.vm.service.impl;
 
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.primary.sample.model.dao.vm.entity.VmExtendInfo;
 import org.primary.sample.model.dao.vm.mapper.VmExtendInfoMapper;
@@ -20,6 +19,8 @@ import java.util.List;
 public class VmExtendInfoServiceImpl extends ServiceImpl<VmExtendInfoMapper, VmExtendInfo> implements IVmExtendInfoService {
     @Override
     public List<VmExtendInfo> queryVmExtendInfoList(String vmId) {
-        return baseMapper.queryVmExtendInfoList(Wrappers.<VmExtendInfo>lambdaQuery().eq(VmExtendInfo::getVmId, vmId));
+        VmExtendInfo info = new VmExtendInfo();
+        info.setVmId(vmId);
+        return baseMapper.queryVmExtendInfoListSQL(info);
     }
 }
