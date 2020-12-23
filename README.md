@@ -10,7 +10,9 @@
   子项目：sample-project-web、sample-project-biz、sample-project-dao、sample-project-sdk、
   sample-project-common、sample-project-domain、sample-project-vo</module>
   
-PS：继承关系便于共性管理，如dependency、plugin等
+PS：继承关系便于共性管理，如dependency、plugin等；<br/>
+    聚会关系便于构建项目；<br/>
+    分析依赖关系有利于防止包冲突；<br/>
 
 <h3>聚合关系</h3>
 sample-project-model<br/>
@@ -34,5 +36,6 @@ PS：关于Spring boot 细节后续更新，比：加载，启动等。
 <h2>3.Spring boot + mybatis + mybatis plus 整合</h2>
 <h2>4.引入log4j2</h2>
 <h2>5.引入lombox<h2/>
-<h2>5.引入easyexcel<h2/>w
-<h2>5.引入hutool<h2/>
+<h2>6.引入easyexcel<h2/>w
+<h2>7.引入hutool<h2/>
+

@@ -20,7 +20,7 @@ import java.util.Objects;
 @SpringBootTest
 @WebAppConfiguration
 @Slf4j
-class VmControllerTests {
+public class VmControllerTests {
 
     @Autowired
     WebApplicationContext webApplicationContext;
