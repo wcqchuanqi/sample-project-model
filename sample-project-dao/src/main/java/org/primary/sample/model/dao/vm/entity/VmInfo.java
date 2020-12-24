@@ -14,8 +14,8 @@ import java.util.Date;
  * @version 0.0.1
  * @since 2020/12/17
  */
-@Setter
 @Getter
+@Setter
 @TableName(value = "vm_info")
 public class VmInfo {
     /**

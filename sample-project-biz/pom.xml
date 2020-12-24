@@ -38,6 +38,10 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+        </dependency>
         <!--spring boot test测试-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

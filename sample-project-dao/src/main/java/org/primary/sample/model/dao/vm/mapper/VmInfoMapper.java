@@ -23,4 +23,5 @@ public interface VmInfoMapper extends BaseMapper<VmInfo> {
      */
     @Select("select id,vm_id,vm_name from vm_info ${ew.customSqlSegment}")
     VmInfo queryVmInfoOne(@Param(Constants.WRAPPER) Wrapper<VmInfo> wrapper);
+
 }

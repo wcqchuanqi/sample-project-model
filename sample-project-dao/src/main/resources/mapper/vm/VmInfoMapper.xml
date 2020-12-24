@@ -16,4 +16,5 @@
     <sql id="Base_Column_List">
         id,vm_id,vm_name, create_time, modify_time, del_logic
     </sql>
+
 </mapper>
