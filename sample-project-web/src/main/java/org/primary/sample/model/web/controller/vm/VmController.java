@@ -46,4 +46,6 @@ public class VmController {
     public ResponseBean<VmDetailInfoResponse> vmDetailInfo(@PathVariable("vmId") String vmId) {
         return new ResponseBean<>(vmWebService.getVmDetailInfo(vmId));
     }
+
+
 }
